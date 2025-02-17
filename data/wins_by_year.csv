@@ -1,0 +1,77 @@
+fullname,year,WDC_year,name.x,total_driver_wins,cons_winner,total_constructor_wins
+Alain Prost,1985,TRUE,McLaren,5,McLaren,6
+Alain Prost,1986,TRUE,McLaren,4,Williams,9
+Alain Prost,1989,TRUE,McLaren,4,McLaren,10
+Alain Prost,1993,TRUE,Williams,7,Williams,10
+Alan Jones,1980,TRUE,Williams,5,Williams,6
+Alberto Ascari,1952,TRUE,Ferrari,6,NA,NA
+Alberto Ascari,1953,TRUE,Ferrari,5,NA,NA
+Ayrton Senna,1988,TRUE,McLaren,8,McLaren,15
+Ayrton Senna,1990,TRUE,McLaren,6,Ferrari,6
+Ayrton Senna,1990,TRUE,McLaren,6,McLaren,6
+Ayrton Senna,1991,TRUE,McLaren,7,McLaren,8
+Damon Hill,1996,TRUE,Williams,8,Williams,12
+Denny Hulme,1967,TRUE,Brabham-Repco,2,Brabham-Repco,4
+Denny Hulme,1967,TRUE,Brabham-Repco,2,Lotus-Ford,4
+Emerson Fittipaldi,1972,TRUE,Team Lotus,5,Team Lotus,5
+Emerson Fittipaldi,1974,TRUE,McLaren,3,McLaren,4
+Fernando Alonso,2005,TRUE,Renault,7,McLaren,10
+Fernando Alonso,2006,TRUE,Renault,7,Ferrari,8
+Fernando Alonso,2006,TRUE,Renault,7,Renault,8
+Graham Hill,1962,TRUE,BRM,4,BRM,4
+Graham Hill,1968,TRUE,Lotus-Ford,3,Lotus-Ford,5
+Jack Brabham,1959,TRUE,Cooper-Climax,2,Cooper-Climax,2
+Jack Brabham,1960,TRUE,Cooper-Climax,5,Cooper-Climax,6
+Jack Brabham,1966,TRUE,Brabham-Repco,4,Brabham-Repco,4
+Jackie Stewart,1969,TRUE,Matra-Ford,6,Matra-Ford,6
+Jackie Stewart,1971,TRUE,Tyrrell,6,Tyrrell,6
+Jackie Stewart,1973,TRUE,Tyrrell,5,Tyrrell,5
+Jacques Villeneuve,1997,TRUE,Williams,7,Williams,8
+James Hunt,1976,TRUE,McLaren,6,Ferrari,6
+James Hunt,1976,TRUE,McLaren,6,McLaren,6
+Jenson Button,2009,TRUE,Brawn,6,Brawn,6
+Jenson Button,2009,TRUE,Brawn,6,Red Bull,6
+Jim Clark,1963,TRUE,Lotus-Climax,7,Lotus-Climax,7
+Jim Clark,1965,TRUE,Lotus-Climax,6,Lotus-Climax,6
+Jochen Rindt,1970,TRUE,Team Lotus,5,Team Lotus,6
+Jody Scheckter,1979,TRUE,Ferrari,3,Ferrari,5
+Jody Scheckter,1979,TRUE,Ferrari,3,Williams,5
+John Surtees,1964,TRUE,Ferrari,2,Ferrari,3
+John Surtees,1964,TRUE,Ferrari,2,Lotus-Climax,3
+Keke Rosberg,1982,TRUE,Williams,1,McLaren,4
+Kimi Räikkönen,2007,TRUE,Ferrari,6,Ferrari,9
+Lewis Hamilton,2008,TRUE,McLaren,5,McLaren,6
+Lewis Hamilton,2014,TRUE,Mercedes,11,Mercedes,16
+Lewis Hamilton,2015,TRUE,Mercedes,10,Mercedes,16
+Lewis Hamilton,2017,TRUE,Mercedes,9,Mercedes,11
+Lewis Hamilton,2018,TRUE,Mercedes,11,Mercedes,11
+Lewis Hamilton,2019,TRUE,Mercedes,11,Mercedes,15
+Lewis Hamilton,2020,TRUE,Mercedes,11,Mercedes,13
+Mario Andretti,1978,TRUE,Team Lotus,6,Team Lotus,8
+Max Verstappen,2021,TRUE,Red Bull,10,Red Bull,11
+Max Verstappen,2022,TRUE,Red Bull,15,Red Bull,17
+Michael Schumacher,1994,TRUE,Benetton,8,Benetton,8
+Michael Schumacher,1995,TRUE,Benetton,9,Benetton,11
+Michael Schumacher,2000,TRUE,Ferrari,9,Ferrari,10
+Michael Schumacher,2001,TRUE,Ferrari,9,Ferrari,9
+Michael Schumacher,2002,TRUE,Ferrari,11,Ferrari,15
+Michael Schumacher,2003,TRUE,Ferrari,6,Ferrari,7
+Michael Schumacher,2004,TRUE,Ferrari,13,Ferrari,15
+Mika Häkkinen,1998,TRUE,McLaren,8,McLaren,9
+Mika Häkkinen,1999,TRUE,McLaren,5,McLaren,7
+Mike Hawthorn,1958,TRUE,Ferrari,1,Ferrari,1
+Nelson Piquet,1981,TRUE,Brabham,3,Williams,4
+Nelson Piquet,1983,TRUE,Brabham,3,Renault,4
+Nelson Piquet,1987,TRUE,Williams,3,Williams,9
+Nico Rosberg,2016,TRUE,Mercedes,9,Mercedes,19
+Nigel Mansell,1992,TRUE,Williams,9,Williams,9
+Niki Lauda,1975,TRUE,Ferrari,5,Ferrari,6
+Niki Lauda,1977,TRUE,Ferrari,3,Team Lotus,5
+Niki Lauda,1984,TRUE,McLaren,5,McLaren,12
+Nino Farina,1950,TRUE,Alfa Romeo,3,NA,NA
+Phil Hill,1961,TRUE,Ferrari,2,Ferrari,5
+Sebastian Vettel,2010,TRUE,Red Bull,5,Red Bull,9
+Sebastian Vettel,2011,TRUE,Red Bull,11,Red Bull,11
+Sebastian Vettel,2012,TRUE,Red Bull,5,McLaren,7
+Sebastian Vettel,2012,TRUE,Red Bull,5,Red Bull,7
+Sebastian Vettel,2013,TRUE,Red Bull,13,Red Bull,13

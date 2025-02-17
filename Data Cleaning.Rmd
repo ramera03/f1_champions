@@ -1,0 +1,184 @@
+---
+title: "Data Cleaning"
+author: "Reilly Amera"
+date: "2025-02-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setup}
+library(tidyverse)
+
+# Data from https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data?select=constructor_standings.csv
+drivers <- read.csv("data/drivers.csv", header = TRUE)
+constructors <- read.csv("data/constructors.csv", header = TRUE)
+circuits <- read.csv("data/circuits.csv", header = TRUE)
+results <- read.csv("data/results.csv", header = TRUE)
+status <- read.csv("data/status.csv", header = TRUE)
+races <- read.csv("data/races.csv", header = TRUE)
+constructor_standings <- read.csv("data/constructor_standings.csv", header = TRUE)
+
+# Data from https://www.kaggle.com/datasets/dubradave/formula-1-drivers-dataset?select=F1DriversDataset.csv
+f1_years <- read.csv("data/F1DriversDataset.csv", header = TRUE)
+```
+
+```{r initial cleaning}
+# Creating a constructors info data set
+constructor_info <- full_join(constructors, constructor_standings, by = join_by(constructorId))
+constructor_info <- subset(constructor_info, select = -c(url))
+constructor_info <- full_join(constructor_info, races, by = join_by(raceId))
+
+# Creating a drivers data set
+f1_data <- full_join(drivers, results, by = join_by(driverId))
+f1_data <- subset(f1_data, select = -c(dob, nationality, url))
+f1_data <- full_join(f1_data, constructors, by = join_by(constructorId))
+f1_data <- subset(f1_data, select = -c(url))
+f1_data <- unite(f1_data, fullname, forename, surname, sep = " ")
+f1_data <- full_join(f1_data, races, by = join_by(raceId))
+f1_data <- subset(f1_data, select = -c(time.y:sprint_time))
+
+# Combining constructor and driver data sets
+f1_data <- rename(f1_data, driver_points = points)
+constructor_standings <- subset(constructor_standings, select = -c(positionText))
+constructor_standings <- rename(constructor_standings, constructor_points = points)
+constructor_standings <- rename(constructor_standings, constructor_position = position)
+constructor_standings <- rename(constructor_standings, constructor_wins = wins)
+f1_data <- full_join(f1_data, constructor_standings, by = join_by(raceId, constructorId))
+```
+
+```{r}
+# Winners Bubble Plot (graph 2)
+
+# Data set of only drivers that have won races
+f1_winners <- f1_data %>% 
+  filter(position == 1) %>%
+  select(driverId, fullname)
+f1_winners <- f1_winners %>% 
+  add_count(fullname, name = "wins") %>%
+  distinct(.keep_all = TRUE)
+f1_years <- rename(f1_years, fullname = Driver)
+f1_winners <- inner_join(f1_winners, f1_years, by = "fullname") 
+f1_winners <- subset(f1_winners, select = -c(Seasons, Race_Entries, Race_Starts, Championship.Years))
+
+# Data set of only drivers that have won the WDC
+f1_champs <- f1_winners %>% 
+  filter(Champion == "True") 
+
+#write_csv(f1_champs, "data/champs.csv")
+```
+
+
+```{r}
+# Wins Over Time Line Graph (graph 1)
+
+# Creating a data set of WDC winners WITH YEARS
+f1_overtime <- f1_data %>% 
+  filter(position == 1) 
+f1_overtime <- inner_join(f1_overtime, f1_years, by = "fullname") 
+f1_champsovertime <- f1_overtime %>% 
+  filter(Champion == "True") 
+f1_champsovertime <- subset(f1_champsovertime, select = -c(driverRef:code))
+f1_champsovertime <- subset(f1_champsovertime, select = -c(number.y:positionText))
+f1_champsovertime <- subset(f1_champsovertime, select = -c(laps:fastestLapSpeed))
+f1_champsovertime <- f1_champsovertime %>% 
+  mutate(Championship.Years = str_remove(Championship.Years, fixed("["))) %>%
+  mutate(Championship.Years = str_remove(Championship.Years, fixed("]")))
+f1_champsovertime <- f1_champsovertime %>%
+  separate_wider_delim(
+    cols = Championship.Years, 
+    delim = ", ",
+    names_sep = "_",
+    too_few = c("align_start"))
+f1_champsovertime <- f1_champsovertime %>%
+  mutate(Championship.Years_1 = na_if(Championship.Years_1, "")) %>% 
+  rename(Championships_Amount = Championships) %>% 
+  pivot_longer(
+    cols = starts_with("Championship.Years_"),
+    names_to = "Championship_#",
+    names_prefix = "Championship.Years_",
+    values_to = "Championship_Year",
+    values_drop_na = TRUE)
+f1_champsovertime <- f1_champsovertime %>% 
+  mutate(WDC_year = year == Championship_Year)
+
+# Total wins by WDC winners, in the seasons where they won the WDC 
+wins_by_year <- f1_champsovertime %>%
+  group_by(fullname, year, WDC_year, name.x) %>%
+  summarize(
+  total_driver_wins = sum(positionOrder == 1, na.rm = TRUE), .groups = 'drop') %>% 
+  filter(WDC_year == TRUE)
+
+# Total wins by constructor, in the seasons where they won the Constructors Championship 
+constructors_yrs <- f1_champsovertime %>% 
+  group_by(year, name.x) %>% 
+  filter(!all(is.na(constructor_wins))) %>%
+  summarize(total_constructor_wins = max(constructor_wins, na.rm = TRUE), .groups = 'drop') %>%
+  rename(cons_winner = name.x)
+max_cons <- function(df) {
+  df %>%
+    group_by(year) %>% 
+    filter(total_constructor_wins == max(total_constructor_wins, na.rm = TRUE)) %>%  
+    ungroup()
+}
+constructors_yrs <- max_cons(constructors_yrs)
+
+# Creating one complete data set for constructor winners and driver winners
+wins_by_year <- left_join(wins_by_year, constructors_yrs, by = join_by(year))
+
+#write_csv(wins_by_year, "data/wins_by_year.csv")
+```
+
+```{r}
+# GOATs (graph 3)
+
+# Creating data set of GOATs and each constructor they worked with
+goats_by_car <- f1_data %>% 
+  filter(fullname %in% c("Lewis Hamilton", "Michael Schumacher")) %>% 
+  group_by(fullname, positionOrder, year, name.x, raceId) %>% 
+  distinct(raceId) 
+
+# Creating data set of GOATs, constructors. Additionally, calculating 1st-3rd place wins, and all other finishes after 3rd place
+goat_stats <- goats_by_car %>% 
+  group_by(year, fullname, name.x) %>%
+  summarise(total_podia = sum(positionOrder %in% 1:3, na.rm = TRUE),
+            total_loss = sum(positionOrder > 3, na.rm = TRUE))
+
+# Years where Lewis Hamilton and Michael Schumacher won the WDC
+LHMS_years <- f1_years %>% 
+  filter(fullname %in% c("Lewis Hamilton", "Michael Schumacher")) %>% 
+  group_by(fullname, Championship.Years) %>% 
+  mutate(Championship.Years = str_remove(Championship.Years, fixed("["))) %>%
+  mutate(Championship.Years = str_remove(Championship.Years, fixed("]")))
+LHMS_years <- LHMS_years %>%
+  separate_wider_delim(
+    cols = Championship.Years, 
+    delim = ", ",
+    names_sep = "_",
+    too_few = c("align_start"))
+LHMS_years <- LHMS_years %>%
+  mutate(Championship.Years_1 = na_if(Championship.Years_1, "")) %>% 
+  rename(Championships_Amount = Championships) %>% 
+  pivot_longer(
+    cols = starts_with("Championship.Years_"),
+    names_to = "Championship_#",
+    names_prefix = "Championship.Years_",
+    values_to = "Championship_Year",
+    values_drop_na = TRUE)
+
+# Creating separate data sets for Lewis Hamilton and Michael Schumacher's winning years
+LH_WDCs <- LHMS_years %>% 
+  filter(fullname %in% c("Lewis Hamilton")) 
+MS_WDCs <- LHMS_years %>% 
+  filter(fullname %in% c("Michael Schumacher")) 
+
+# Adding T/F column for years where Michael Schumacher or Lewis Hamilton won the WDC 
+goat_stats <- goat_stats %>%
+  mutate(MS_WDC = year %in% MS_WDCs$Championship_Year) %>%
+  mutate(LH_WDC = year %in% LH_WDCs$Championship_Year)
+
+#write_csv(goat_stats, "data/goat_stats.csv")
+```
+

@@ -12,6 +12,7 @@
 3. drivers.csv: General information about each driver
 4. races.csv: General information about each race
 5. results.csv: Each race result
+6. F1DriversDataset.csv: Information about each driver and years in which they competed
 
 **Data used for Tableau visualizations:**
 1. champs.csv: All F1 World Driver Champions

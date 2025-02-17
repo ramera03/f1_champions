@@ -17,7 +17,6 @@ drivers <- read.csv("data/drivers.csv", header = TRUE)
 constructors <- read.csv("data/constructors.csv", header = TRUE)
 circuits <- read.csv("data/circuits.csv", header = TRUE)
 results <- read.csv("data/results.csv", header = TRUE)
-status <- read.csv("data/status.csv", header = TRUE)
 races <- read.csv("data/races.csv", header = TRUE)
 constructor_standings <- read.csv("data/constructor_standings.csv", header = TRUE)
 

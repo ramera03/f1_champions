@@ -1,3 +1,0 @@
-driverId,fullname,wins,Nationality,Championships,Pole_Positions,Wins,Podiums,Fastest_Laps,Points,Active,Decade,Pole_Rate,Start_Rate,Win_Rate,Podium_Rate,FastLap_Rate,Points_Per_Entry,Years_Active,Champion
-1,Lewis Hamilton,105,United Kingdom,7,103,103,191,61,4415.5,True,2010,0.3311897106109325,1,0.3311897106109325,0.6141479099678456,0.19614147909967847,14.19774919614148,16,True
-30,Michael Schumacher,91,Germany,7,68,91,155,77,1566,False,2000,0.2207792207792208,0.9935064935064936,0.29545454545454547,0.5032467532467533,0.25,5.084415584415584,19,True

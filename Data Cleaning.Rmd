@@ -12,16 +12,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r setup}
 library(tidyverse)
 
-# Data from https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data?select=constructor_standings.csv
+# Data from Source 1
+f1_years <- read.csv("data/F1DriversDataset.csv", header = TRUE)
+
+# Data from Source 2
 drivers <- read.csv("data/drivers.csv", header = TRUE)
 constructors <- read.csv("data/constructors.csv", header = TRUE)
-circuits <- read.csv("data/circuits.csv", header = TRUE)
 results <- read.csv("data/results.csv", header = TRUE)
 races <- read.csv("data/races.csv", header = TRUE)
 constructor_standings <- read.csv("data/constructor_standings.csv", header = TRUE)
-
-# Data from https://www.kaggle.com/datasets/dubradave/formula-1-drivers-dataset?select=F1DriversDataset.csv
-f1_years <- read.csv("data/F1DriversDataset.csv", header = TRUE)
 ```
 
 ```{r initial cleaning}

@@ -1,77 +1,77 @@
-fullname,year,WDC_year,name.x,total_driver_wins,cons_winner,total_constructor_wins
-Alain Prost,1985,TRUE,McLaren,5,McLaren,6
-Alain Prost,1986,TRUE,McLaren,4,Williams,9
-Alain Prost,1989,TRUE,McLaren,4,McLaren,10
-Alain Prost,1993,TRUE,Williams,7,Williams,10
-Alan Jones,1980,TRUE,Williams,5,Williams,6
-Alberto Ascari,1952,TRUE,Ferrari,6,NA,NA
-Alberto Ascari,1953,TRUE,Ferrari,5,NA,NA
-Ayrton Senna,1988,TRUE,McLaren,8,McLaren,15
-Ayrton Senna,1990,TRUE,McLaren,6,Ferrari,6
-Ayrton Senna,1990,TRUE,McLaren,6,McLaren,6
-Ayrton Senna,1991,TRUE,McLaren,7,McLaren,8
-Damon Hill,1996,TRUE,Williams,8,Williams,12
-Denny Hulme,1967,TRUE,Brabham-Repco,2,Brabham-Repco,4
-Denny Hulme,1967,TRUE,Brabham-Repco,2,Lotus-Ford,4
-Emerson Fittipaldi,1972,TRUE,Team Lotus,5,Team Lotus,5
-Emerson Fittipaldi,1974,TRUE,McLaren,3,McLaren,4
-Fernando Alonso,2005,TRUE,Renault,7,McLaren,10
-Fernando Alonso,2006,TRUE,Renault,7,Ferrari,8
-Fernando Alonso,2006,TRUE,Renault,7,Renault,8
-Graham Hill,1962,TRUE,BRM,4,BRM,4
-Graham Hill,1968,TRUE,Lotus-Ford,3,Lotus-Ford,5
-Jack Brabham,1959,TRUE,Cooper-Climax,2,Cooper-Climax,2
-Jack Brabham,1960,TRUE,Cooper-Climax,5,Cooper-Climax,6
-Jack Brabham,1966,TRUE,Brabham-Repco,4,Brabham-Repco,4
-Jackie Stewart,1969,TRUE,Matra-Ford,6,Matra-Ford,6
-Jackie Stewart,1971,TRUE,Tyrrell,6,Tyrrell,6
-Jackie Stewart,1973,TRUE,Tyrrell,5,Tyrrell,5
-Jacques Villeneuve,1997,TRUE,Williams,7,Williams,8
-James Hunt,1976,TRUE,McLaren,6,Ferrari,6
-James Hunt,1976,TRUE,McLaren,6,McLaren,6
-Jenson Button,2009,TRUE,Brawn,6,Brawn,6
-Jenson Button,2009,TRUE,Brawn,6,Red Bull,6
-Jim Clark,1963,TRUE,Lotus-Climax,7,Lotus-Climax,7
-Jim Clark,1965,TRUE,Lotus-Climax,6,Lotus-Climax,6
-Jochen Rindt,1970,TRUE,Team Lotus,5,Team Lotus,6
-Jody Scheckter,1979,TRUE,Ferrari,3,Ferrari,5
-Jody Scheckter,1979,TRUE,Ferrari,3,Williams,5
-John Surtees,1964,TRUE,Ferrari,2,Ferrari,3
-John Surtees,1964,TRUE,Ferrari,2,Lotus-Climax,3
-Keke Rosberg,1982,TRUE,Williams,1,McLaren,4
-Kimi Räikkönen,2007,TRUE,Ferrari,6,Ferrari,9
-Lewis Hamilton,2008,TRUE,McLaren,5,McLaren,6
-Lewis Hamilton,2014,TRUE,Mercedes,11,Mercedes,16
-Lewis Hamilton,2015,TRUE,Mercedes,10,Mercedes,16
-Lewis Hamilton,2017,TRUE,Mercedes,9,Mercedes,11
-Lewis Hamilton,2018,TRUE,Mercedes,11,Mercedes,11
-Lewis Hamilton,2019,TRUE,Mercedes,11,Mercedes,15
-Lewis Hamilton,2020,TRUE,Mercedes,11,Mercedes,13
-Mario Andretti,1978,TRUE,Team Lotus,6,Team Lotus,8
-Max Verstappen,2021,TRUE,Red Bull,10,Red Bull,11
-Max Verstappen,2022,TRUE,Red Bull,15,Red Bull,17
-Michael Schumacher,1994,TRUE,Benetton,8,Benetton,8
-Michael Schumacher,1995,TRUE,Benetton,9,Benetton,11
-Michael Schumacher,2000,TRUE,Ferrari,9,Ferrari,10
-Michael Schumacher,2001,TRUE,Ferrari,9,Ferrari,9
-Michael Schumacher,2002,TRUE,Ferrari,11,Ferrari,15
-Michael Schumacher,2003,TRUE,Ferrari,6,Ferrari,7
-Michael Schumacher,2004,TRUE,Ferrari,13,Ferrari,15
-Mika Häkkinen,1998,TRUE,McLaren,8,McLaren,9
-Mika Häkkinen,1999,TRUE,McLaren,5,McLaren,7
-Mike Hawthorn,1958,TRUE,Ferrari,1,Ferrari,1
-Nelson Piquet,1981,TRUE,Brabham,3,Williams,4
-Nelson Piquet,1983,TRUE,Brabham,3,Renault,4
-Nelson Piquet,1987,TRUE,Williams,3,Williams,9
-Nico Rosberg,2016,TRUE,Mercedes,9,Mercedes,19
-Nigel Mansell,1992,TRUE,Williams,9,Williams,9
-Niki Lauda,1975,TRUE,Ferrari,5,Ferrari,6
-Niki Lauda,1977,TRUE,Ferrari,3,Team Lotus,5
-Niki Lauda,1984,TRUE,McLaren,5,McLaren,12
-Nino Farina,1950,TRUE,Alfa Romeo,3,NA,NA
-Phil Hill,1961,TRUE,Ferrari,2,Ferrari,5
-Sebastian Vettel,2010,TRUE,Red Bull,5,Red Bull,9
-Sebastian Vettel,2011,TRUE,Red Bull,11,Red Bull,11
-Sebastian Vettel,2012,TRUE,Red Bull,5,McLaren,7
-Sebastian Vettel,2012,TRUE,Red Bull,5,Red Bull,7
-Sebastian Vettel,2013,TRUE,Red Bull,13,Red Bull,13
+fullname,year,WDC_year,name.x,total_driver_wins,total_races,cons_winner,total_constructor_wins,prop_dr_wins,prop_cons_wins
+Alain Prost,1985,TRUE,McLaren,5,16,McLaren,6,0.3125,0.375
+Alain Prost,1986,TRUE,McLaren,4,16,Williams,9,0.25,0.5625
+Alain Prost,1989,TRUE,McLaren,4,16,McLaren,10,0.25,0.625
+Alain Prost,1993,TRUE,Williams,7,16,Williams,10,0.4375,0.625
+Alan Jones,1980,TRUE,Williams,5,14,Williams,6,0.35714285714285715,0.42857142857142855
+Alberto Ascari,1952,TRUE,Ferrari,6,8,NA,NA,0.75,NA
+Alberto Ascari,1953,TRUE,Ferrari,5,9,NA,NA,0.5555555555555556,NA
+Ayrton Senna,1988,TRUE,McLaren,8,16,McLaren,15,0.5,0.9375
+Ayrton Senna,1990,TRUE,McLaren,6,16,Ferrari,6,0.375,0.375
+Ayrton Senna,1990,TRUE,McLaren,6,16,McLaren,6,0.375,0.375
+Ayrton Senna,1991,TRUE,McLaren,7,16,McLaren,8,0.4375,0.5
+Damon Hill,1996,TRUE,Williams,8,16,Williams,12,0.5,0.75
+Denny Hulme,1967,TRUE,Brabham-Repco,2,11,Brabham-Repco,4,0.18181818181818182,0.36363636363636365
+Denny Hulme,1967,TRUE,Brabham-Repco,2,11,Lotus-Ford,4,0.18181818181818182,0.36363636363636365
+Emerson Fittipaldi,1972,TRUE,Team Lotus,5,12,Team Lotus,5,0.4166666666666667,0.4166666666666667
+Emerson Fittipaldi,1974,TRUE,McLaren,3,15,McLaren,4,0.2,0.26666666666666666
+Fernando Alonso,2005,TRUE,Renault,7,19,McLaren,10,0.3684210526315789,0.5263157894736842
+Fernando Alonso,2006,TRUE,Renault,7,18,Ferrari,8,0.3888888888888889,0.4444444444444444
+Fernando Alonso,2006,TRUE,Renault,7,18,Renault,8,0.3888888888888889,0.4444444444444444
+Graham Hill,1962,TRUE,BRM,4,9,BRM,4,0.4444444444444444,0.4444444444444444
+Graham Hill,1968,TRUE,Lotus-Ford,3,12,Lotus-Ford,5,0.25,0.4166666666666667
+Jack Brabham,1959,TRUE,Cooper-Climax,2,9,Cooper-Climax,2,0.2222222222222222,0.2222222222222222
+Jack Brabham,1960,TRUE,Cooper-Climax,5,10,Cooper-Climax,6,0.5,0.6
+Jack Brabham,1966,TRUE,Brabham-Repco,4,9,Brabham-Repco,4,0.4444444444444444,0.4444444444444444
+Jackie Stewart,1969,TRUE,Matra-Ford,6,11,Matra-Ford,6,0.5454545454545454,0.5454545454545454
+Jackie Stewart,1971,TRUE,Tyrrell,6,11,Tyrrell,6,0.5454545454545454,0.5454545454545454
+Jackie Stewart,1973,TRUE,Tyrrell,5,15,Tyrrell,5,0.3333333333333333,0.3333333333333333
+Jacques Villeneuve,1997,TRUE,Williams,7,17,Williams,8,0.4117647058823529,0.47058823529411764
+James Hunt,1976,TRUE,McLaren,6,16,Ferrari,6,0.375,0.375
+James Hunt,1976,TRUE,McLaren,6,16,McLaren,6,0.375,0.375
+Jenson Button,2009,TRUE,Brawn,6,17,Brawn,6,0.35294117647058826,0.35294117647058826
+Jenson Button,2009,TRUE,Brawn,6,17,Red Bull,6,0.35294117647058826,0.35294117647058826
+Jim Clark,1963,TRUE,Lotus-Climax,7,10,Lotus-Climax,7,0.7,0.7
+Jim Clark,1965,TRUE,Lotus-Climax,6,10,Lotus-Climax,6,0.6,0.6
+Jochen Rindt,1970,TRUE,Team Lotus,5,13,Team Lotus,6,0.38461538461538464,0.46153846153846156
+Jody Scheckter,1979,TRUE,Ferrari,3,15,Ferrari,5,0.2,0.3333333333333333
+Jody Scheckter,1979,TRUE,Ferrari,3,15,Williams,5,0.2,0.3333333333333333
+John Surtees,1964,TRUE,Ferrari,2,10,Ferrari,3,0.2,0.3
+John Surtees,1964,TRUE,Ferrari,2,10,Lotus-Climax,3,0.2,0.3
+Keke Rosberg,1982,TRUE,Williams,1,16,McLaren,4,0.0625,0.25
+Kimi Räikkönen,2007,TRUE,Ferrari,6,17,Ferrari,9,0.35294117647058826,0.5294117647058824
+Lewis Hamilton,2008,TRUE,McLaren,5,18,McLaren,6,0.2777777777777778,0.3333333333333333
+Lewis Hamilton,2014,TRUE,Mercedes,11,19,Mercedes,16,0.5789473684210527,0.8421052631578947
+Lewis Hamilton,2015,TRUE,Mercedes,10,19,Mercedes,16,0.5263157894736842,0.8421052631578947
+Lewis Hamilton,2017,TRUE,Mercedes,9,20,Mercedes,11,0.45,0.55
+Lewis Hamilton,2018,TRUE,Mercedes,11,21,Mercedes,11,0.5238095238095238,0.5238095238095238
+Lewis Hamilton,2019,TRUE,Mercedes,11,21,Mercedes,15,0.5238095238095238,0.7142857142857143
+Lewis Hamilton,2020,TRUE,Mercedes,11,17,Mercedes,13,0.6470588235294118,0.7647058823529411
+Mario Andretti,1978,TRUE,Team Lotus,6,16,Team Lotus,8,0.375,0.5
+Max Verstappen,2021,TRUE,Red Bull,10,22,Red Bull,11,0.45454545454545453,0.5
+Max Verstappen,2022,TRUE,Red Bull,15,22,Red Bull,17,0.6818181818181818,0.7727272727272727
+Michael Schumacher,1994,TRUE,Benetton,8,16,Benetton,8,0.5,0.5
+Michael Schumacher,1995,TRUE,Benetton,9,17,Benetton,11,0.5294117647058824,0.6470588235294118
+Michael Schumacher,2000,TRUE,Ferrari,9,17,Ferrari,10,0.5294117647058824,0.5882352941176471
+Michael Schumacher,2001,TRUE,Ferrari,9,17,Ferrari,9,0.5294117647058824,0.5294117647058824
+Michael Schumacher,2002,TRUE,Ferrari,11,17,Ferrari,15,0.6470588235294118,0.8823529411764706
+Michael Schumacher,2003,TRUE,Ferrari,6,16,Ferrari,7,0.375,0.4375
+Michael Schumacher,2004,TRUE,Ferrari,13,18,Ferrari,15,0.7222222222222222,0.8333333333333334
+Mika Häkkinen,1998,TRUE,McLaren,8,16,McLaren,9,0.5,0.5625
+Mika Häkkinen,1999,TRUE,McLaren,5,16,McLaren,7,0.3125,0.4375
+Mike Hawthorn,1958,TRUE,Ferrari,1,11,Ferrari,1,0.09090909090909091,0.09090909090909091
+Nelson Piquet,1981,TRUE,Brabham,3,15,Williams,4,0.2,0.26666666666666666
+Nelson Piquet,1983,TRUE,Brabham,3,15,Renault,4,0.2,0.26666666666666666
+Nelson Piquet,1987,TRUE,Williams,3,16,Williams,9,0.1875,0.5625
+Nico Rosberg,2016,TRUE,Mercedes,9,21,Mercedes,19,0.42857142857142855,0.9047619047619048
+Nigel Mansell,1992,TRUE,Williams,9,16,Williams,9,0.5625,0.5625
+Niki Lauda,1975,TRUE,Ferrari,5,14,Ferrari,6,0.35714285714285715,0.42857142857142855
+Niki Lauda,1977,TRUE,Ferrari,3,17,Team Lotus,5,0.17647058823529413,0.29411764705882354
+Niki Lauda,1984,TRUE,McLaren,5,16,McLaren,12,0.3125,0.75
+Nino Farina,1950,TRUE,Alfa Romeo,3,7,NA,NA,0.42857142857142855,NA
+Phil Hill,1961,TRUE,Ferrari,2,8,Ferrari,5,0.25,0.625
+Sebastian Vettel,2010,TRUE,Red Bull,5,19,Red Bull,9,0.2631578947368421,0.47368421052631576
+Sebastian Vettel,2011,TRUE,Red Bull,11,19,Red Bull,11,0.5789473684210527,0.5789473684210527
+Sebastian Vettel,2012,TRUE,Red Bull,5,20,McLaren,7,0.25,0.35
+Sebastian Vettel,2012,TRUE,Red Bull,5,20,Red Bull,7,0.25,0.35
+Sebastian Vettel,2013,TRUE,Red Bull,13,19,Red Bull,13,0.6842105263157895,0.6842105263157895

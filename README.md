@@ -1,5 +1,9 @@
 # MACS 40700 Assignment 4: F1 Champions
 
+| Tableau Dashboard |
+|--------|
+| ![](images/F1 Champions.png) |
+| *Static image of the F1 Champions Tableau Dashboard. Click the link below for the full, interactive experience!* |
 [Link to Tableau Dashboard](https://public.tableau.com/app/profile/reilly.amera/viz/F1Champions_17398427006190/F1Champions)
 
 ### Repo Guide

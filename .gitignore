@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 
-# Local files
+# Local files (large files, unused data sources)
 local_only/

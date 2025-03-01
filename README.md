@@ -1,5 +1,7 @@
 # MACS 40700 Assignment 4: F1 Champions
 
+<iframe src="https://public.tableau.com/views/F1Champions_17398427006190/F1Champions?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true" width="980px" height="900px"></iframe>
+
 | Tableau Dashboard |
 |--------|
 | ![](images/F1_Champions.png) |

@@ -1,4 +1,4 @@
-# MACS 40700 Assignment 4: F1 Champions
+# MACS 40700 Assignment 4: Formula 1 Champions 
 
 | Tableau Dashboard |
 |--------|
